@@ -7,6 +7,13 @@ body {
   color: #d6cfcfcd;
 }
 
+/* Ajusta según el alto real de tu header fijo */
+#sobre-mi,
+#contacto,
+#proyectos {
+  scroll-margin-top: 100px;
+}
+
 h2 {
   font-size: 45px;
   font-weight: 900;
@@ -428,6 +435,15 @@ main {
     max-width: 95%;
     padding: 0 10px;
   }   
+}
+
+.main-content-contact h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  font-weight: 900;
+  text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.85);
 }
 
 
