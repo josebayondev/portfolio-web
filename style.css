@@ -1,0 +1,399 @@
+
+
+/* Estilos globales opcionales */
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Space Grotesk', sans-serif;
+  background: linear-gradient(to right, #1a1919dc, #333333c6);
+  color: #d6cfcfcd;
+
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px 10%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: linear-gradient(to right, #1a1919dc, #333333c6);
+  padding: 10px 20px;
+}
+
+h2 {
+  font-size: 45px;
+  font-weight: 900;
+  color: #d6cfcfcd;
+  margin: 0;
+}
+
+/* H1 personalizado */
+.header h1 {
+  font-size: 35px;
+  font-weight: 700;
+  color: #d6cfcfcd;
+  margin: 0;
+}
+
+.header .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espacio entre logo y texto */
+  text-decoration: none;
+}
+
+
+.red {
+  color: red;
+  font-weight: 900;
+  font-size: 65px;
+}
+.blue {
+  color: #007bff;
+  font-weight: 900;
+  font-size: 65px;
+}
+
+/* NAV */
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  padding-top: 15px;
+}
+
+.nav ul li {
+  padding-right: 20px; /* Ajusta este valor a tu gusto */
+}
+
+.nav a {
+  text-decoration: none;
+  color: #d6cfcfcd;
+  font-weight: 900;
+  transition: color 0.3s, transform 0.3s;
+  display: inline-block; /* Necesario para que transform funcione bien */
+}
+
+.social-links {
+  margin-left: 450px;
+  display: flex;
+  gap: 10px;
+  padding-bottom: 10px;
+}
+
+.nav a:hover {
+  color: #007bff; 
+  transform: scale(1.65); /* Aumenta el tamaño un 25% */
+}
+
+main {
+  padding-top: 40px;;
+}
+.main-content {
+  display: flex;
+  justify-content: center;   /* Centra horizontalmente */
+  align-items: center;       /* Centra verticalmente */
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.main-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #d6cfcfcd;
+  text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.85); /* Más fuerte y difuso */
+}
+
+.main-content .y {
+  color: #007bff; /* Azul o el color que prefieras */
+}
+
+.main-content .app {
+  color: red;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 5%;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+  }
+}
+
+.container {
+  opacity: 0;
+  animation: fadeInText 4s ease-in-out 0.5s forwards;
+  color: #d6cfcfcd;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.custom-button {
+  background: transparent;
+  color: #d6cfcfcd;
+  border: 2px solid #007bff;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 123, 255, 0.2);
+}
+
+.custom-button:hover {
+  background: #007bff;
+  color: #fff;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 30px red;
+  text-decoration: none;
+}
+
+@keyframes fadeInText {
+  to {
+    opacity: 1;
+  }
+}
+
+.about {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #d6cfcfcd;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  white-space: pre-line; /* para respetar los saltos de línea */
+}
+
+.footer {
+  background: linear-gradient(to right, #1a1919dc, #333333c6);
+  color: #d6cfcfcd;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -8px 20px rgba(0, 0, 0, 0.7); /* sombra más visible desde arriba */
+}
+
+
+/* ESTILOS DE ABOUT.HTML */
+
+.main-content-about {
+  padding: 40px 10%;
+  color: #d6cfcfcd;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centra horizontalmente todo dentro del main */
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.main-content-about h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  font-weight: 900;
+  text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.85);
+}
+
+.main-content-about p {
+  align-items: center;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  letter-spacing: 1.0px;
+}
+
+.about-p1 {
+  display: inline-block;
+  font-weight: 900;
+  justify-content: center;
+  align-items: center;
+  color: #007bff; /* Azul o el color que prefieras */
+  border: 2px solid red;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.about-p2 {
+  display: inline-block;
+  font-weight: 900;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.main-content-about {
+  opacity: 0;
+  animation: fadeInText 2.5s ease-in-out forwards;
+}
+
+.dev-container {
+  width: 500px;
+  height: 500px;       /* tamaño más equilibrado */
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 25%;
+  background: #f0f0f0; /* para ver el espacio si hay */
+}
+
+.dev-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;           /* cubre el área */
+  object-position: center 40%; /* sube un poco la imagen para que corte menos abajo */
+  display: block;
+  opacity: 90%;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 25%;
+
+}
+
+#scrollBtn {
+  font-size: 20px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0, 123, 255, 0.2);
+}
+
+
+/* ESTILOS DE PROJECS.HTML */
+
+.main-content-projects {
+  padding: 40px 10%;
+  color: #d6cfcfcd;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centra horizontalmente todo dentro del main */
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.main-content-projects h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  font-weight: 900;
+  text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.85);
+}
+.img-dog-share {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.img-dog-share img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.9);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-dog-share img:hover {
+  transform: scale(1.20);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+} 
+
+.img-dog-share-app {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; 
+  justify-content: center;
+  padding: 20px;
+}
+.img-dog-share-app img {
+  width: 200px;                /* tamaño no muy grande */
+  height: auto;                /* mantiene proporción */
+  border-radius: 30px;         /* bordes redondeados */
+  object-fit: contain;         /* muestra la imagen entera sin recorte */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* sombra suave */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-dog-share-app img:hover {
+  transform: scale(1.50);       /* zoom suave al pasar el ratón */  
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.95); /* sombra más intensa */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  text-decoration: none; /* Elimina subrayado al pasar el ratón */
+}
+
+
+/* Estilos para el modal */
+.modal {
+  display: none; /* oculto por defecto */
+  position: fixed;
+  z-index: 9999; /* MUCHO más alto para estar encima de todo */
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.7); /* fondo oscuro semi-transparente */
+}
+
+.modal.show {
+  display: flex; /* visible y centrado solo cuando tiene esta clase */
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  max-width: 50vw;  /* mitad de la pantalla ancho */
+  max-height: 80vh; /* para que no ocupe toda la altura */
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.8);
+  object-fit: contain;
+  position: relative; /* para posicionar bien el close */
+  z-index: 10000; /* aseguramos que contenido esté por encima */
+}
+
+.modal-close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  z-index: 10001; /* botón close siempre encima */
+}
+

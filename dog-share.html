@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jose | Desarrollador Web</title>
+    <meta name="description" content="Portfolio de Jose, desarrollador web especializado en React y Flutter." />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- HEADER / NAVEGACIÓN PRINCIPAL -->
+    <header class="header">
+        <a class="logo" href="index.html">
+            <h1>Hey<span class="red">,</span> soy <span class="blue">J</span>ose</h1>
+        </a>
+        <nav class="nav">
+            <ul>
+                <li><a href="about.html">Sobre mí</a></li>
+                <li><a href="projects.html">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+
+                <div class="social-links">
+                    <li>
+                        <a href="https://github.com/josebayondev" target="_blank" aria-label="GitHub"
+                            class="social-link">
+                            <i class="fab fa-github fa-2x"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/josebayondev/" target="_blank" aria-label="LinkedIn"
+                            class="social-link">
+                            <i class="fab fa-linkedin fa-2x"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="assets/Jose_CV.pdf" target="_blank" aria-label="Currículum"
+                            class="social-link cv-link">
+                            <i class="fas fa-file-alt fa-2x"></i> CV
+                        </a>
+                    </li>
+                </div>
+
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- SECCIÓN PRINCIPAL -->
+    <main class="main-content-projects">
+        <div class="container">
+            <div class="main-content-projects">
+                <h1 class="about-h1"> Dog Share <span class="red"> App </span></h1>
+
+                <div class="img-dog-share-app">
+                    <img src="assets/welcome-dog-share.png" alt="welcome-dog-share" class="welcome-dog-share">
+                    <img src="assets/login-dog-share.png" alt="login-dog-share" class="login-dog-share">
+                    <img src="assets/register-dog-share.png" alt="register-dog-share" class="register-dog-share">
+                    <img src="assets/veterinarian-dog-share.png" alt="veterinarian-dog-share"
+                        class="veterinarian-dog-share">
+                </div>
+                <h2>Bienvenido a Dog Share 🐶 , la app de entretenimiento perruno.</h2>
+                <p>Esta app permite a los usuarios compartir fotos y videos de sus perros, así como encontrar compañeros
+                    de juego para sus mascotas.
+                    <br>Los usuarios pueden registrarse, iniciar sesión y explorar un feed de contenido perruno.
+                    <br>La app está desarrollada con Flutter y Firebase, lo que permite una experiencia fluida y rápida.
+                    <br>¡Descubre más sobre Dog Share en mi repositorio de GitHub!
+                    <br>
+
+                <div id="imageModal" class="modal">
+                    <span class="modal-close">&times;</span>
+                    <img id="modalImage" class="modal-content" src="" alt="">
+                </div>
+                <div class="button-container">
+                    <a href="https://github.com/josebayondev/dog-share" class="custom-button">Visita Dog Share en GitHub</a>
+                </div>
+                </p>
+
+
+            </div>
+    </main>
+
+    <button id="scrollBtn" title="Bajar página">↓</button>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <p>&copy; 2025 Jose - Desarrollador Web. Todos los derechos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
