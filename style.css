@@ -3,8 +3,26 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Space Grotesk', sans-serif;
-  background: linear-gradient(to right, #1a1919dc, #333333c6);
+  background: linear-gradient(to right, #0f0e0e, #333333d7);
   color: #d6cfcfcd;
+}
+
+h2 {
+  font-size: 45px;
+  font-weight: 900;
+  color: #d6cfcfcd;
+  margin: 0;
+}
+
+.red {
+  color: red;
+  font-weight: 900;
+  font-size: 65px;
+}
+.blue {
+  color: #007bff;
+  font-weight: 900;
+  font-size: 65px;
 }
 
 /* HEADER */
@@ -17,15 +35,8 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: linear-gradient(to right, #1a1919dc, #333333c6);
+  background: linear-gradient(to right, #0f0e0e, #333333d7);
   padding: 10px 20px;
-}
-
-h2 {
-  font-size: 45px;
-  font-weight: 900;
-  color: #d6cfcfcd;
-  margin: 0;
 }
 
 /* H1 personalizado */
@@ -43,16 +54,7 @@ h2 {
   text-decoration: none;
 }
 
-.red {
-  color: red;
-  font-weight: 900;
-  font-size: 65px;
-}
-.blue {
-  color: #007bff;
-  font-weight: 900;
-  font-size: 65px;
-}
+
 
 /* NAV */
 .nav ul {
@@ -171,7 +173,7 @@ main {
 }
 
 .footer {
-  background: linear-gradient(to right, #1a1919dc, #333333c6);
+  background: linear-gradient(to right, #0f0e0e, #333333d7);
   color: #d6cfcfcd;
   text-align: center;
   padding: 20px;
@@ -427,4 +429,65 @@ main {
     padding: 0 10px;
   }   
 }
-  
+
+
+form {
+  background: #1c1c1c;
+  padding: 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.7);
+  max-width: 500px;
+  margin: 2rem auto;
+  color: #d6cfcfcd;
+  font-family: 'Space Grotesk', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: 2px solid red;
+}
+
+form label {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+form input,
+form textarea,
+form select {
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: #333;
+  color: #d6cfcfcd;
+  transition: border 0.3s ease, background 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+  background: #444;
+  border: 2px solid #007bff;
+}
+
+form button {
+  background: transparent;
+  color: #d6cfcfcd;
+  border: 2px solid #007bff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: center;
+  box-shadow: 0 4px 20px rgba(0, 123, 255, 0.2);
+}
+
+form button:hover {
+  background: #007bff;
+  color: #fff;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 30px red;
+}
