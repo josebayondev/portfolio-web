@@ -19,7 +19,7 @@ tieBreakLinks.forEach(link => {
 
     const toast = document.createElement('div');
     toast.id = 'tie-break-toast';
-    toast.textContent = '¡La función Tie Break está en desarrollo!';
+    toast.textContent = '¡La App Tie Break está en desarrollo!';
 
     // Estilos del popup
     toast.style.position = 'fixed';
