@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+.horizontal-scroll {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    height: 100vh;
+    width: 400vw;
+    /* 4 pantallas de 100vw */
+    transition: transform 0.6s ease;
+}
+
+.logo {
+  height: 100px;       /* Altura más pequeña */
+  width: auto;        /* Mantiene la proporción original */
+  margin: 0 5px;      /* Un poco de espacio entre los logos */
+  vertical-align: middle; /* Para que se alineen bien con el texto si lo hay */
+  z-index: 20;
+  transition: transform 0.3s ease;
+  
+}
+
+/* PANEL PARA MOSTRAR LAS PANTALLAS  */
+.panel {
+    width: 100vw;
+    height: 100vh;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 3rem;
+}
+
+
+.fixed-nav {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  background: rgba(255, 255, 255, 0.784);
+  backdrop-filter: blur(20px);
+  padding: 15px 40px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.9);
+  gap: 70px;
+}
+
+.fixed-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+
+.fixed-nav a {
+  color: black;
+  text-decoration: none;
+  font-weight: 800;           /* letra fina */
+  font-size: 1.2rem;          /* tamaño cómodo */
+  letter-spacing: 0.7em;     /* un poco de espacio entre letras */
+  transition: color 0.3s;
+  text-transform: uppercase;  /* opcional, para más modernidad */
+}
+
+.fixed-nav a:hover {
+    color: #1abc9c;
+}
+
+.logo-container {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  animation: bounceInLeft 1s ease-out forwards;
+}
+
+.logo {
+  height: 150px;
+  width: auto;
+}
+
+.logo-j {
+  margin-left: 2px; /* Separación mínima casi pegados */
+}
+
+@keyframes bounceInLeft {
+  0% {
+    transform: translateY(-200px) scale(0.3);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(20px) scale(1.05);
+    opacity: 1;
+  }
+  70% {
+    transform: translateY(-10px) scale(0.9);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes bounce-on-hover {
+  0%   { transform: translateY(0); }
+  30%  { transform: translateY(-10px); }
+  60%  { transform: translateY(5px); }
+  100% { transform: translateY(0); }
+}
+
+.logo:hover {
+  animation: bounce-on-hover 0.6s ease;
+}
+
+/* PANTALLA 1 */
+.bounce-text {
+  animation: bounce 2s infinite;
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-25px);
+  }
+  60% {
+    transform: translateY(10px);
+  }
+}
+
+.bounce-text:hover {
+    animation: alternate-reverse 0.5s infinite;
+    color: #1abc9c; /* Cambia el color al pasar el mouse */
+    transition: color 0.3s ease; /* Transición suave para el cambio de color */
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el mouse */
+    transition: transform 0.3s ease; /* Transición suave para el cambio de tamaño */
+}
+
+/* PANTALLA 2 */
+.falling-text {
+  position: relative;
+  animation: fallLoop 8s ease-in-out infinite;
+  font-size: 2.5rem;
+  color: white;
+  white-space: nowrap;
+}
+
+@keyframes fallLoop {
+  0% {
+    top: -200px;
+    opacity: 0;
+  }
+  20% {
+    top: 30%;
+    opacity: 1;
+  }
+  50% {
+    top: 50%;
+    opacity: 1;
+  }
+  80% {
+    top: 90%;
+    opacity: 0.5;
+  }
+  100% {
+    top: 110%;
+    opacity: 0;
+  }
+}
+
+#panel3 {
+  position: relative;
+  background-color: #5e5e5e;
+  animation: breathing 4s ease-in-out infinite;
+  overflow: hidden;
+}
+
+#panel3::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0);
+  pointer-events: none;
+  transition: background-color 4s ease-in-out;
+  z-index: 1;
+}
+
+#panel3:hover::after {
+  background-color: rgba(0, 0, 0, 1);
+}
+
+#panel3 > * {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes breathing {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}
+.face {
+  width: 400px;
+  height: 400px;
+  background-color: #ffe0b2;
+  border-radius: 50%;
+  position: absolute; /* ¡Clave para centrar! */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.eye {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border-radius: 50%;
+  top: 80px;
+  overflow: hidden;
+}
+
+/* ojo izquierdo */
+.eye.left {
+  left: 30px;
+}
+
+/* ojo derecho */
+.eye.right {
+  right: 30px;
+}
+
+.eyeball {
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border-radius: 50%;
+  margin: 35px auto;
+  z-index: 1;
+  position: relative;
+}
+
+.eyelid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffe0b2;
+  z-index: 2;
+  transition: top 0.5s ease;
+}
+
+/* Animación: cerrado (por defecto) */
+.sleepy .eyelid {
+  top: 0;
+}
+
+/* Animación: despierto */
+.awake .eyelid {
+  top: -100%;
+}
